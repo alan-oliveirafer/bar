@@ -2,33 +2,57 @@
 //  BarDoZe_Tests.swift
 //  BarDoZéTests
 //
-//  Created by Jonathan on 29/01/20.
+//  Created by Alan Fernandes on 29/01/20.
 //  Copyright © 2020 hbsis. All rights reserved.
 //
 
 import XCTest
-@testable import BarDoZe_
+@testable import BarDoZe
 
 class BarDoZe_Tests: XCTestCase {
+    
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    //MARK: Bar Class Tests
+    //MARK: Classe Bar Teste
+    
+    //Confirm That The Bar Initializer Return a Bar Object When Passed Valid Parameters
+    //Confirma Se o Inicializador De Barra Retorna Um Objeto De Barra Quando Passa Parâmetros Válidos
+    func testBarInitializationSucceeds() {
+    
+        //Zero Rating
+        //Zero Classificação
+        let zeroRatingBar = Bar.init(nome: "Sem Classificação", foto: nil, telefone: 4732323232, celular: 47991919191, rua: "Rua Do BarDoZe", complemento: nil, numero: 832, rating: 0)
+        XCTAssertNotNil(zeroRatingBar)
+        
+        
+        //Highest Positive Rating
+        //Classificação Máxima Positva
+        let positiveRatingBar = Bar.init(nome: "Classificação Positiva", foto: nil, telefone: 4732323232, celular: 47991919191, rua: "Rua Do BarDoZe", complemento: nil, numero: 832, rating: 0)
+        XCTAssertNotNil(positiveRatingBar)
+        
+        }
+    
+    
+    //Confirm That The Bar Initialier Returns Nil When Passed a Negative Rating Or An Empty Name
+    //Confirma Se a Barra Inicial Retorna Nil Quando Passou Uma Classificação Negativa Ou Vazia
+    func testBarInitializationFails() {
+        
+        //Negative Rating
+        //Classificação Negativa
+        let negativeRatingBar = Bar.init(nome: "Classificação Positiva", foto: nil, telefone: 4732323232, celular: 47991919191, rua: "Rua Do BarDoZe", complemento: nil, numero: 832, rating: -1)
+        XCTAssertNil(negativeRatingBar)
+        
+        //Rating Exceeds Maximum
+        //Classificação Excede o Máximo
+        let largeRatingBar = Bar.init(nome: "Classificação Positiva", foto: nil, telefone: 4732323232, celular: 47991919191, rua: "Rua Do BarDoZe", complemento: nil, numero: 832, rating: 6)
+        
+        
+        //Empty String
+        //String Vazia
+        let emptyStringBar = Bar.init(nome: "Classificação Positiva", foto: nil, telefone: 4732323232, celular: 47991919191, rua: "Rua Do BarDoZe", complemento: nil, numero: 832, rating: 0)
+        XCTAssertNil(emptyStringBar)
+        
+        
+        
         }
     }
-
-}

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB83E26923EAF00100B2991F /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB83E26823EAF00100B2991F /* Bar.swift */; };
+		AB87835B23ED9538006062C8 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB87835A23ED9538006062C8 /* TableViewCell.swift */; };
+		AB8A982B23ED9AE6005A8BB8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A982A23ED9AE6005A8BB8 /* TableViewController.swift */; };
+		AB9840C123E8697000E0F2F7 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9840C023E8697000E0F2F7 /* RatingControl.swift */; };
 		ABA8E00D23E1A0DE00220D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA8E00C23E1A0DE00220D1C /* AppDelegate.swift */; };
 		ABA8E00F23E1A0DE00220D1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA8E00E23E1A0DE00220D1C /* ViewController.swift */; };
 		ABA8E01223E1A0DE00220D1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABA8E01023E1A0DE00220D1C /* Main.storyboard */; };
@@ -26,14 +30,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		ABA8E00923E1A0DE00220D1C /* BarDoZé.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BarDoZé.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB83E26823EAF00100B2991F /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
+		AB87835A23ED9538006062C8 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		AB8A982A23ED9AE6005A8BB8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		AB9840C023E8697000E0F2F7 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		ABA8E00923E1A0DE00220D1C /* BarDoZe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarDoZe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA8E00C23E1A0DE00220D1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABA8E00E23E1A0DE00220D1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABA8E01123E1A0DE00220D1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABA8E01323E1A0E200220D1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABA8E01623E1A0E200220D1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABA8E01823E1A0E200220D1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABA8E01D23E1A0E200220D1C /* BarDoZéTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BarDoZéTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABA8E01D23E1A0E200220D1C /* BarDoZeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarDoZeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA8E02123E1A0E200220D1C /* BarDoZe_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDoZe_Tests.swift; sourceTree = "<group>"; };
 		ABA8E02323E1A0E200220D1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,8 +76,8 @@
 		ABA8E00A23E1A0DE00220D1C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ABA8E00923E1A0DE00220D1C /* BarDoZé.app */,
-				ABA8E01D23E1A0E200220D1C /* BarDoZéTests.xctest */,
+				ABA8E00923E1A0DE00220D1C /* BarDoZe.app */,
+				ABA8E01D23E1A0E200220D1C /* BarDoZeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,12 +85,16 @@
 		ABA8E00B23E1A0DE00220D1C /* BarDoZé */ = {
 			isa = PBXGroup;
 			children = (
+				AB83E26823EAF00100B2991F /* Bar.swift */,
 				ABA8E00C23E1A0DE00220D1C /* AppDelegate.swift */,
 				ABA8E00E23E1A0DE00220D1C /* ViewController.swift */,
 				ABA8E01023E1A0DE00220D1C /* Main.storyboard */,
 				ABA8E01323E1A0E200220D1C /* Assets.xcassets */,
 				ABA8E01523E1A0E200220D1C /* LaunchScreen.storyboard */,
 				ABA8E01823E1A0E200220D1C /* Info.plist */,
+				AB9840C023E8697000E0F2F7 /* RatingControl.swift */,
+				AB87835A23ED9538006062C8 /* TableViewCell.swift */,
+				AB8A982A23ED9AE6005A8BB8 /* TableViewController.swift */,
 			);
 			path = "BarDoZé";
 			sourceTree = "<group>";
@@ -99,9 +111,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ABA8E00823E1A0DE00220D1C /* BarDoZé */ = {
+		ABA8E00823E1A0DE00220D1C /* BarDoZe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABA8E02623E1A0E200220D1C /* Build configuration list for PBXNativeTarget "BarDoZé" */;
+			buildConfigurationList = ABA8E02623E1A0E200220D1C /* Build configuration list for PBXNativeTarget "BarDoZe" */;
 			buildPhases = (
 				ABA8E00523E1A0DE00220D1C /* Sources */,
 				ABA8E00623E1A0DE00220D1C /* Frameworks */,
@@ -111,14 +123,14 @@
 			);
 			dependencies = (
 			);
-			name = "BarDoZé";
+			name = BarDoZe;
 			productName = "BarDoZé";
-			productReference = ABA8E00923E1A0DE00220D1C /* BarDoZé.app */;
+			productReference = ABA8E00923E1A0DE00220D1C /* BarDoZe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ABA8E01C23E1A0E200220D1C /* BarDoZéTests */ = {
+		ABA8E01C23E1A0E200220D1C /* BarDoZeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABA8E02923E1A0E200220D1C /* Build configuration list for PBXNativeTarget "BarDoZéTests" */;
+			buildConfigurationList = ABA8E02923E1A0E200220D1C /* Build configuration list for PBXNativeTarget "BarDoZeTests" */;
 			buildPhases = (
 				ABA8E01923E1A0E200220D1C /* Sources */,
 				ABA8E01A23E1A0E200220D1C /* Frameworks */,
@@ -129,9 +141,9 @@
 			dependencies = (
 				ABA8E01F23E1A0E200220D1C /* PBXTargetDependency */,
 			);
-			name = "BarDoZéTests";
+			name = BarDoZeTests;
 			productName = "BarDoZéTests";
-			productReference = ABA8E01D23E1A0E200220D1C /* BarDoZéTests.xctest */;
+			productReference = ABA8E01D23E1A0E200220D1C /* BarDoZeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -153,7 +165,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ABA8E00423E1A0DE00220D1C /* Build configuration list for PBXProject "BarDoZé" */;
+			buildConfigurationList = ABA8E00423E1A0DE00220D1C /* Build configuration list for PBXProject "BarDoZe" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -166,8 +178,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ABA8E00823E1A0DE00220D1C /* BarDoZé */,
-				ABA8E01C23E1A0E200220D1C /* BarDoZéTests */,
+				ABA8E00823E1A0DE00220D1C /* BarDoZe */,
+				ABA8E01C23E1A0E200220D1C /* BarDoZeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -197,7 +209,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB83E26923EAF00100B2991F /* Bar.swift in Sources */,
+				AB8A982B23ED9AE6005A8BB8 /* TableViewController.swift in Sources */,
 				ABA8E00F23E1A0DE00220D1C /* ViewController.swift in Sources */,
+				AB87835B23ED9538006062C8 /* TableViewCell.swift in Sources */,
+				AB9840C123E8697000E0F2F7 /* RatingControl.swift in Sources */,
 				ABA8E00D23E1A0DE00220D1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +231,7 @@
 /* Begin PBXTargetDependency section */
 		ABA8E01F23E1A0E200220D1C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ABA8E00823E1A0DE00220D1C /* BarDoZé */;
+			target = ABA8E00823E1A0DE00220D1C /* BarDoZe */;
 			targetProxy = ABA8E01E23E1A0E200220D1C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -406,7 +422,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarDoZé.app/BarDoZé";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarDoZe.app/BarDoZe";
 			};
 			name = Debug;
 		};
@@ -426,14 +442,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarDoZé.app/BarDoZé";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarDoZe.app/BarDoZe";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ABA8E00423E1A0DE00220D1C /* Build configuration list for PBXProject "BarDoZé" */ = {
+		ABA8E00423E1A0DE00220D1C /* Build configuration list for PBXProject "BarDoZe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABA8E02423E1A0E200220D1C /* Debug */,
@@ -442,7 +458,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABA8E02623E1A0E200220D1C /* Build configuration list for PBXNativeTarget "BarDoZé" */ = {
+		ABA8E02623E1A0E200220D1C /* Build configuration list for PBXNativeTarget "BarDoZe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABA8E02723E1A0E200220D1C /* Debug */,
@@ -451,7 +467,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABA8E02923E1A0E200220D1C /* Build configuration list for PBXNativeTarget "BarDoZéTests" */ = {
+		ABA8E02923E1A0E200220D1C /* Build configuration list for PBXNativeTarget "BarDoZeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABA8E02A23E1A0E200220D1C /* Debug */,
