@@ -10,6 +10,7 @@
 		AB83E26923EAF00100B2991F /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB83E26823EAF00100B2991F /* Bar.swift */; };
 		AB87835B23ED9538006062C8 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB87835A23ED9538006062C8 /* TableViewCell.swift */; };
 		AB8A982B23ED9AE6005A8BB8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A982A23ED9AE6005A8BB8 /* TableViewController.swift */; };
+		AB93116B23FAB54A00DEDDFA /* MKMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93116A23FAB54A00DEDDFA /* MKMapViewController.swift */; };
 		AB9840C123E8697000E0F2F7 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9840C023E8697000E0F2F7 /* RatingControl.swift */; };
 		ABA8E00D23E1A0DE00220D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA8E00C23E1A0DE00220D1C /* AppDelegate.swift */; };
 		ABA8E00F23E1A0DE00220D1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA8E00E23E1A0DE00220D1C /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		AB83E26823EAF00100B2991F /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		AB87835A23ED9538006062C8 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		AB8A982A23ED9AE6005A8BB8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		AB93116A23FAB54A00DEDDFA /* MKMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewController.swift; sourceTree = "<group>"; };
 		AB9840C023E8697000E0F2F7 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		ABA8E00923E1A0DE00220D1C /* BarDoZe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarDoZe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA8E00C23E1A0DE00220D1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				AB83E26823EAF00100B2991F /* Bar.swift */,
 				ABA8E00C23E1A0DE00220D1C /* AppDelegate.swift */,
 				ABA8E00E23E1A0DE00220D1C /* ViewController.swift */,
+				AB93116A23FAB54A00DEDDFA /* MKMapViewController.swift */,
 				ABA8E01023E1A0DE00220D1C /* Main.storyboard */,
 				ABA8E01323E1A0E200220D1C /* Assets.xcassets */,
 				ABA8E01523E1A0E200220D1C /* LaunchScreen.storyboard */,
@@ -215,6 +218,7 @@
 				AB87835B23ED9538006062C8 /* TableViewCell.swift in Sources */,
 				AB9840C123E8697000E0F2F7 /* RatingControl.swift in Sources */,
 				ABA8E00D23E1A0DE00220D1C /* AppDelegate.swift in Sources */,
+				AB93116B23FAB54A00DEDDFA /* MKMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

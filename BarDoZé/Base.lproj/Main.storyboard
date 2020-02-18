@@ -9,6 +9,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="UD7-hN-TWX">
+            <objects>
+                <viewController id="o62-6C-fTL" customClass="MKMapViewController" customModule="BarDoZe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eBK-6K-fyY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0f8-Xy-dYf">
+                                <rect key="frame" x="0.0" y="20" width="406" height="716"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0f8-Xy-dYf" firstAttribute="top" secondItem="SKR-zz-cVY" secondAttribute="top" id="3n5-dv-Y43"/>
+                            <constraint firstItem="SKR-zz-cVY" firstAttribute="trailing" secondItem="0f8-Xy-dYf" secondAttribute="trailing" constant="8" id="GyY-cE-t3f"/>
+                            <constraint firstItem="SKR-zz-cVY" firstAttribute="trailing" secondItem="0f8-Xy-dYf" secondAttribute="trailing" id="HC5-MA-Nz8"/>
+                            <constraint firstItem="SKR-zz-cVY" firstAttribute="bottom" secondItem="0f8-Xy-dYf" secondAttribute="bottom" id="TDq-GB-Q7w"/>
+                            <constraint firstItem="0f8-Xy-dYf" firstAttribute="leading" secondItem="SKR-zz-cVY" secondAttribute="leading" id="UuY-BL-ZNU"/>
+                            <constraint firstItem="0f8-Xy-dYf" firstAttribute="top" secondItem="SKR-zz-cVY" secondAttribute="top" id="atX-Mn-I82"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SKR-zz-cVY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="0f8-Xy-dYf" id="3Et-Xd-srB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8qw-Uf-Lgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-401" y="-109"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="UfS-Vu-OMH">
             <objects>
@@ -67,6 +99,7 @@
                                     <outlet property="imgBar" destination="Hb7-pQ-8eE" id="M0t-r0-K9b"/>
                                     <outlet property="nomeBar" destination="oee-tn-aoj" id="ofL-Pb-rVH"/>
                                     <outlet property="ratingControl" destination="Dgb-Yg-CxF" id="c3i-3K-Poy"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="X3J-ek-MpZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -78,7 +111,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gke-cR-C2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="-109"/>
+            <point key="canvasLocation" x="513" y="-109"/>
         </scene>
         <!--Novo Bar-->
         <scene sceneID="tne-QT-ifu">
@@ -205,18 +238,32 @@
                     <navigationItem key="navigationItem" title="Novo Bar" id="Tnd-CU-MIs">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="XRu-LG-ZJR">
                             <color key="tintColor" red="0.39542179399999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="bttCancelar:" destination="BYZ-38-t0r" id="deM-YV-EMn"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Salvar" id="vQG-Fx-H4F">
                             <color key="tintColor" red="0.0" green="0.42132852980000002" blue="0.018903495629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="SBo-6g-DhD" kind="unwind" unwindAction="unwindToBarListWithSender:" id="sVI-8Y-MVP"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="barTitle" destination="Tnd-CU-MIs" id="FJK-IE-ugh"/>
+                        <outlet property="bttSalvar" destination="vQG-Fx-H4F" id="iEO-3J-ILx"/>
                         <outlet property="image" destination="2N7-gU-6TM" id="cAc-yi-WPk"/>
                         <outlet property="ratingControl" destination="QWQ-Px-ffa" id="vZO-cM-xWp"/>
-                        <outlet property="saveBtt" destination="Tnd-CU-MIs" id="7Bf-hH-nlg"/>
+                        <outlet property="txCelular" destination="Pje-ka-xHH" id="NNi-QJ-jbA"/>
+                        <outlet property="txComplemento" destination="vgs-cA-QCq" id="IZw-kJ-0EX"/>
+                        <outlet property="txNome" destination="7vC-22-uAi" id="K6n-AH-CRv"/>
+                        <outlet property="txNumero" destination="iof-9y-QXp" id="Ad4-bH-Btt"/>
+                        <outlet property="txRua" destination="RHt-Lu-E9E" id="scc-H8-cZg"/>
+                        <outlet property="txTelefone" destination="jUx-m0-rXs" id="Bhb-gy-DUE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="SBo-6g-DhD" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="yup-Oa-QPU"/>
                 <tapGestureRecognizer id="MhH-yt-3Au">
                     <connections>
@@ -242,10 +289,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezW-6X-lZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1418.840579710145" y="-109.23913043478262"/>
+            <point key="canvasLocation" x="1413" y="265"/>
         </scene>
     </scenes>
     <resources>
         <image name="emptyStar" width="75" height="75"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="X3J-ek-MpZ"/>
+    </inferredMetricsTieBreakers>
 </document>

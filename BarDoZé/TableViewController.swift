@@ -5,7 +5,7 @@
 //  Created by Jonathan on 07/02/20.
 //  Copyright © 2020 hbsis. All rights reserved.
 //
-
+import os.log
 import UIKit
 
 class TableViewController: UITableViewController {
@@ -22,6 +22,16 @@ class TableViewController: UITableViewController {
         loadSampleBar()
     }
     
+    @IBAction func unwindToBarList(sender: UIStoryboardSegue) {
+        if let ViewController = sender.source as? ViewController, let Bar = ViewController.bar{
+            
+            // Add a new meal.
+            let newIndexPath = IndexPath(row: bar.count, section: 0)
+            
+            bar.append(Bar)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
     
     //MARK: Private Methods
     //MARK: Metodos Privados
@@ -121,14 +131,37 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+            
+        case "Adiciona Item":
+            os_log("Adicionando Um Novo Bar", log: OSLog.default, type: .debug)
 
+        case "Mostrar Detalhes":
+            guard let barDetailViewController = segue.destination as? ViewController else {
+                fatalError("Destino Inesperado: \(segue.destination)")
+            }
+            
+            guard let selectedMealCell = sender as? TableViewCell else {
+                fatalError("Sender Inesperado: \(sender)")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedMealCell) else {
+                fatalError("A Célula Selecionada Não Está Sendo Exibida Pela Tabela")
+            }
+            
+            let selectedBar = bar[indexPath.row]
+            barDetailViewController.bar = selectedBar
+            
+        default:
+            fatalError("Segue Identifier Inesperado; \(segue.identifier)")
+        }
+}
 }
