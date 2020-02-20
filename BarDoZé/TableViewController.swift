@@ -17,6 +17,10 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Use The Edit Button Item Provided By The TableViewController
+        //Use o Item Do Botão Fornecido Pelo TableViewController
+        navigationItem.leftBarButtonItem = editButtonItem
+        
         //Load The Sample Data
         //Carregar Os Dados
         loadSampleBar()
@@ -25,11 +29,21 @@ class TableViewController: UITableViewController {
     @IBAction func unwindToBarList(sender: UIStoryboardSegue) {
         if let ViewController = sender.source as? ViewController, let Bar = ViewController.bar{
             
-            // Add a new meal.
-            let newIndexPath = IndexPath(row: bar.count, section: 0)
-            
-            bar.append(Bar)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                //Update An Existing Bar
+                //Atualizar Um Bar Existente
+                bar[selectedIndexPath.row] = Bar
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }
+            else {
+                //Adding a New Bar
+                //Adicionando Um Novo Bar
+                let newIndexPath = IndexPath(row: bar.count, section: 0)
+                
+                bar.append(Bar)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+                
+            }
         }
     }
     
@@ -96,25 +110,32 @@ class TableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+
+    
+    //Override To Support Editing The TableView
+    //Override Para Dar Suporte a Edição Do TableView
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            
+            
+            //Delete The Row From The Data Source
+            //Exclui a Linha Fonte De Dados
+            bar.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
+            
+            
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -149,11 +170,12 @@ class TableViewController: UITableViewController {
                 fatalError("Destino Inesperado: \(segue.destination)")
             }
             
-            guard let selectedMealCell = sender as? TableViewCell else {
+            guard let selectedBarCell = sender as? TableViewCell else {
                 fatalError("Sender Inesperado: \(sender)")
+                
             }
             
-            guard let indexPath = tableView.indexPath(for: selectedMealCell) else {
+            guard let indexPath = tableView.indexPath(for: selectedBarCell) else {
                 fatalError("A Célula Selecionada Não Está Sendo Exibida Pela Tabela")
             }
             
@@ -162,6 +184,7 @@ class TableViewController: UITableViewController {
             
         default:
             fatalError("Segue Identifier Inesperado; \(segue.identifier)")
+
         }
-}
+    }
 }
