@@ -56,7 +56,7 @@
                                 <navigationItem title="Seus Bares" id="RoP-XX-FUe">
                                     <barButtonItem key="rightBarButtonItem" systemItem="add" id="69e-kn-GGX">
                                         <connections>
-                                            <segue destination="vPh-nA-5TY" kind="show" id="Ao6-86-MEz"/>
+                                            <segue destination="vPh-nA-5TY" kind="show" identifier="Adiciona Item" id="Ao6-86-MEz"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
@@ -99,7 +99,7 @@
                                     <outlet property="imgBar" destination="Hb7-pQ-8eE" id="M0t-r0-K9b"/>
                                     <outlet property="nomeBar" destination="oee-tn-aoj" id="ofL-Pb-rVH"/>
                                     <outlet property="ratingControl" destination="Dgb-Yg-CxF" id="c3i-3K-Poy"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="X3J-ek-MpZ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="Mostrar Detalhes" id="X3J-ek-MpZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

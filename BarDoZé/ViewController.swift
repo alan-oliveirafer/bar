@@ -39,11 +39,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
             navigationItem.title = bar.nome
             txNome.text = bar.nome
             image.image = bar.foto
-            txNumero.text = String(bar.numero)
             txRua.text = bar.rua
             txComplemento.text = bar.complemento
-            txTelefone.text = String(bar.telefone)
-            txCelular.text = String(bar.celular)
+            txNumero.text = String(bar.numero ?? 0)
+            txCelular.text = String(bar.celular ?? 0)
+            txTelefone.text = String(bar.telefone ?? 0)
             ratingControl.rating = bar.rating
         }
         
@@ -147,9 +147,21 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     //MARK: Navigation
     //MARK: Navegação
     @IBAction func bttCancelar(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        //Depending On Style Of Presentation, This ViewController Needs To Be Dismissed In Two Different Ways
+        //Dependendo Do Estilo De Apresentação, Esse ViewController Precisa Ser Descartado De Duas Maneiras Diferentes
+        let isPresentingInAddBarMode = presentingViewController is UINavigationController
+        
+        if isPresentingInAddBarMode {
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        }
+        else {
+            fatalError("O ViewController Não Está Dentro De Um NavigationController")
+        }
     }
-    
+
     
     //This Method Lets You Configure a View Controller Before It's Presented
     //Este Método Permite Configurar Um Controlador De Exibição Antes De Ser Apresentado
